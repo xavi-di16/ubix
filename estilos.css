@@ -1,0 +1,93 @@
+:root {
+  --primary: #0077FF;
+  --secondary: #FFFFFF;
+  --text: #333333;
+  --gray: #F2F2F2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: var(--gray);
+  color: var(--text);
+}
+
+header {
+  background: var(--primary);
+  color: white;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header img {
+  height: 32px;
+}
+
+.menu {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.contenido {
+  padding: 1rem;
+}
+
+.buscador {
+  padding: 0.5rem;
+  width: 100%;
+  margin-top: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.btn-buscar {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.lista-horarios,
+.lista-favoritos {
+  list-style: none;
+  padding: 1rem;
+}
+
+.lista-horarios li,
+.lista-favoritos li {
+  padding: 0.5rem;
+  background: white;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: var(--secondary);
+  border-top: 1px solid #ddd;
+  display: flex;
+  justify-content: space-around;
+  padding: 0.5rem 0;
+}
+
+.bottom-nav a {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: var(--primary);
+  text-decoration: none;
+  cursor: pointer;
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UBIX - Seguimiento de Colectivos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0077FF;
+      --secondary: #FFFFFF;
+      --text: #333333;
+      --gray: #F2F2F2;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background-color: var(--gray);
+      color: var(--text);
+    }
+
+    header {
+      background: var(--primary);
+      color: white;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header img {
+      height: 32px;
+    }
+
+    .menu {
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    #mapa {
+      width: 100%;
+      height: 70vh;
+      background: #ccc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #666;
+    }
+
+    .info-colectivo {
+      padding: 1rem;
+      background: var(--secondary);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin: 1rem;
+      border-radius: 12px;
+    }
+
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: var(--secondary);
+      border-top: 1px solid #ddd;
+      display: flex;
+      justify-content: space-around;
+      padding: 0.5rem 0;
+    }
+
+    .bottom-nav button {
+      background: none;
+      border: none;
+      font-size: 1rem;
+      color: var(--primary);
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="Logo-men (1).png" alt="UBIX Logo" />
+    <div class="menu">☰</div>
+  </header>
+
+  <div id="mapa">[Mapa en tiempo real aquí]</div>
+
+  <div class="info-colectivo">
+    <h3>Línea 27 - ERSA</h3>
+    <p>Próxima parada: Terminal Córdoba</p>
+    <p>ETA: 5 minutos</p>
+  </div>
+
+  <nav class="bottom-nav">
+    <a href="index.html">🏠</a>
+    <a href="busqueda.html">🔍</a>
+    <a href="horarios.html">🕒</a>
+    <a href="favoritos.html">❤️</a>
+  </nav>
+
+  <script>
+    // Simulación de ubicación en tiempo real
+    document.addEventListener("DOMContentLoaded", () => {
+      const mapa = document.getElementById('mapa');
+      // En una versión real se usaría Leaflet o Google Maps aquí
+      mapa.textContent = "[Mapa en tiempo real cargado con Leaflet o similar]";
+    });
+  </script>
+</body>
+</html>
